@@ -1,5 +1,5 @@
-@import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import 'variables';
 
 * {
   box-sizing: border-box;
@@ -44,4 +44,26 @@ body {
     max-width: $container-xs;
     padding: 0 15px;
   }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &.active {
+    display: block;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
 }

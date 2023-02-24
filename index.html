@@ -6,6 +6,10 @@
     content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
   <link rel="stylesheet" href="./styles/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="scripts/wow.js" defer></script>
+  <script src="scripts/modal.js" defer></script>
   <title>Конференция</title>
 </head>
 <body>
@@ -19,7 +23,7 @@
   </header>
 
   <main>
-    <section class='overview'>
+    <section class='overview wow'>
       <div class='overview__container container'>
         <div class='overview__wrapper'>
           <p class='overview__description'>
@@ -30,12 +34,12 @@
             <div class='overview__badge badge'>Онлайн</div>
             <div class='overview__badge badge'>Русский</div>
           </div>
-          <button class='overview__btn btn'>Подать заявку</button>
+          <button class='overview__btn btn open-modal-btn'>Подать заявку</button>
         </div>
       </div>
     </section>
 
-    <section class='problems'>
+    <section class='problems wow'>
       <div class='problems__container container'>
         <h2 class='problems__title h2'>Проблематика</h2>
         <div class='problems__items'>
@@ -47,7 +51,7 @@
       </div>
     </section>
 
-    <section class='terms'>
+    <section class='terms wow'>
       <div class='terms__container container'>
         <div class='terms__info'>
           <div class='terms__title h2'>
@@ -65,7 +69,7 @@
       </div>
     </section>
 
-    <section class='stages'>
+    <section class='stages wow bounceInUp'>
       <div class='stages__container container'>
         <h2 class='stages__title h2'>Этапы конференции</h2>
         <div class='stages__items'>
@@ -88,7 +92,7 @@
       </div>
     </section>
 
-    <section class='sponsor'>
+    <section class='sponsor wow bounceInUp'>
       <div class='sponsor__container container'>
         <h2 class='sponsor__title h2'>Организаторы</h2>
         <div class='sponsor__items'>
@@ -101,17 +105,68 @@
       </div>
     </section>
 
-    <section class='application'>
+    <section class='application wow bounceInUp'>
       <div class='application__container container card'>
         <h2 class='application__title h2'>Подача заявки</h2>
         <div class='application__info'>
           <p class='application__description'>
             Если вы готовы оставить заявку, нажмите на кнопку и заполните форму со всеми предложенными данными
           </p>
-          <button class='application__btn btn'>Подать заявку</button>
+          <button class='application__btn btn open-modal-btn'>Подать заявку</button>
         </div>
       </div>
     </section>
   </main>
+
+  <div class='overlay'></div>
+  <div class='modal'>
+    <form>
+      <div class='modal__title'>Подача заявки</div>
+      <div class='modal__inputs'>
+        <div class='input-container'>
+          <label class='label' for='fullname'>ФИО</label>
+          <input class='input' id='fullname' placeholder='Введите ФИО' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='status'>Статус</label>
+          <input class='input' id='status' placeholder='Введите статус' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='dateOfBirth'>Дата рождения</label>
+          <input class='input' id='dateOfBirth' placeholder='Введите дату рождения' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='email'>Email</label>
+          <input class='input' type='email' id='email' placeholder='Введите Email' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='phone'>Контактный телефон</label>
+          <input class='input' id='phone' placeholder='Введите контектный телефон' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='articleTitle'>Название статьи</label>
+          <input class='input' id='articleTitle' placeholder='Введите название статьи' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='director'>Научный руководитель</label>
+          <input class='input' id='director' placeholder='Введите руководителя' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='pageSize'>Кол-во страниц</label>
+          <input class='input' type='number' id='pageSize' placeholder='Введите кол-во страниц' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='place'>Место работы</label>
+          <input class='input' id='place' placeholder='Введите место работы' />
+        </div>
+        <div class='input-container'>
+          <label class='label' for='file'>Поле прикрепления файла</label>
+          <input class='input' type='file' id='file' placeholder='asd' />
+        </div>
+      </div>
+
+      <button class='modal__btn btn' type='submit'>Подать заявку</button>
+    </form>
+  </div>
 </body>
 </html>

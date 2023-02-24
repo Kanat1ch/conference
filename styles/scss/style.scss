@@ -2,6 +2,8 @@
 @import 'components/badge';
 @import 'components/button';
 @import 'components/card';
+@import 'components/input';
+@import 'components/modal';
 
 .header {
   margin: 50px 0 30px;
@@ -217,5 +219,19 @@
   &__description {
     font-size: 18px;
     margin-bottom: 40px;
+  }
+}
+
+.modal {
+  width: 700px;
+
+  &__btn {
+    margin: 0 auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
